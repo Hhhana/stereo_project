@@ -33,12 +33,6 @@ for fname in images:
         # 绘制并显示拐角
         cv.drawChessboardCorners(img, (7,6), corners2, ret)
         #cv.imshow('img', img)
-        '''
-        ffname = fname.replace('\\','/')
-        newName = ffname[0:ffname.rfind('.')] + '_corn.jpg'
-        print(sub + '\n')
-        cv.imwrite(newName,img)
-        '''
         cv.waitKey(500)
 cv.destroyAllWindows()
 ret, mtx, dist, rvecs, tvecs = cv.calibrateCamera(objpoints, imgpoints, gray.shape[::-1], None, None)
