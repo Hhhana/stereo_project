@@ -3,5 +3,5 @@
 分为以下三个部分：
 Part Ⅰ：Camera Basics
 Part Ⅱ：Binocular Basics
-Part Ⅲ：从vvvv
+Part Ⅲ：
 这里仅给出编程题的代码实现和注释。
