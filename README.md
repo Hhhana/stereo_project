@@ -19,7 +19,7 @@ reference：http://woshicver.com/Eighth/7_1_%E7%9B%B8%E6%9C%BA%E6%A0%A1%E5%87%86
 ### 问题8：Learn about Zhang’s method for camera calibration. Can you implement Zhang’s method? 
 代码实现为文件夹zhang's implementation，共有5个python文件，其中main.py是主程序用于实现张氏标定法。使用OpenCV文档中提供的left.zip中所有图片进行标定。  
 tips：运行前需要修改图片路径  
-line41 `images = glob.glob('E:/Project_Stereo_left/left/*.jpg')` 
+line41 `images = glob.glob('E:/Project_Stereo_left/left/*.jpg')`  
 reference：https://blog.csdn.net/qq_40369926/article/details/89251296?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.edu_weight&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.edu_weight
 
 ## Part Ⅱ：Binocular Basics 
