@@ -4,11 +4,14 @@
 分为以下三个部分： 
 ## Part Ⅰ：Camera Basics
 ### 问题6：Provided a series of images taken by the camera, can you calibrate the camera with OpenCV functions? 
+#### Answer
 代码实现为calibration.py，代码地址https://github.com/Hhhana/stereo_project/blob/master/calibration.py  
 使用OpenCV文档中提供的left.zip中所有图片进行相机标定。  
-tips：运行前需要修改图片路径  
+#### Tip
+运行前需要修改图片路径    
 line19 `images = glob.glob('E:/Project_Stereo_left/left/*.jpg')`    
-reference：http://woshicver.com/Eighth/7_1_%E7%9B%B8%E6%9C%BA%E6%A0%A1%E5%87%86/
+#### Reference
+http://woshicver.com/Eighth/7_1_%E7%9B%B8%E6%9C%BA%E6%A0%A1%E5%87%86/
 
 ### 问题7：Undistort the images with the calibration results you computed. 
 代码实现为undistort.py，代码地址https://github.com/Hhhana/stereo_project/blob/master/undistort.py  
