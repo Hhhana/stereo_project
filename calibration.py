@@ -16,7 +16,7 @@ objp[:,:2] = np.mgrid[0:7,0:6].T.reshape(-1,2)
 # 用于存储所有图像的对象点和图像点的数组。
 objpoints = [] # 真实世界中的3d点
 imgpoints = [] # 图像中的2d点
-images = glob.glob('E:/Project_Stereo_left/left/*.jpg')
+images = glob.glob('./images/left/*.jpg')
 
 for fname in images:
     #对每张图片，找到角点并记录其世界坐标和图像坐标
