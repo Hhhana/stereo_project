@@ -20,12 +20,12 @@ image_lists = []  # 存储获取到的图像
 image_points = []  # 存储图像的点
 
 # 1.读图,找角点
-image_dir = "E:/pics"
+image_dir = "./images"
 image_names = []
 
-[image_names.append(image_dir + "/left%02d.jpg" % i) for i in
+[image_names.append(image_dir + "/left/left%02d.jpg" % i) for i in
      [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14]]  # 没有10
-[image_names.append(image_dir + "/right%02d.jpg" % i) for i in [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14]]
+[image_names.append(image_dir + "/right/right%02d.jpg" % i) for i in [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14]]
 print(len(image_names))
 
 for image_name in image_names:
@@ -71,8 +71,8 @@ retval, cameraMatrix1, distCoeffs1, cameraMatrix2, distCoeffs2, R, T, E, F = \
 
 # 5. 矫正一张图像看看，是否完成了极线矫正
 start_time = time.time()
-fname1 = 'E:/Project_Stereo_left/left/left01.jpg'
-fname2 = 'E:/Project_Stereo_right/right/right01.jpg'   
+fname1 = './images/left/left01.jpg'
+fname2 = './images/right/right01.jpg'   
 img1 = cv2.imread(fname1)
 img2 = cv2.imread(fname2)
 gray1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
