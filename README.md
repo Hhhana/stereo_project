@@ -28,15 +28,15 @@ reference：https://blog.csdn.net/qq_40369926/article/details/89251296?utm_mediu
 ## Part Ⅱ：Binocular Basics
 ### 问题12：Now please use OpenCV to calibrate the binocular cameras with images in left.zip and right.zip respectively. Report the results.
 ### 问题14：Now use OpenCV to rectify the left and the right images with the calibration results obtained from Problem 13.
-代码实现为rectification.py，代码地址https://github.com/Hhhana/stereo_project/blob/master/rectification.py  
-使用OpenCV文档中提供的left.zip和right.zip图片来获取双目标定参数，同时利用SGBM方法对第一张图进行双目矫正。 
+两个问题代码实现为rectification.py，代码地址https://github.com/Hhhana/stereo_project/blob/master/rectification.py    
+使用OpenCV文档中提供的left.zip和right.zip图片来获取双目标定参数，同时利用SGBM方法对第一张图进行双目矫正。  
 tips：运行前需要修改图片路径  
 line23 `image_dir = "E:/pics"`  
 line74 `fname1 = 'E:/Project_Stereo_left/left/left01.jpg'`  
 line75 `fname2 = 'E:/Project_Stereo_right/right/right01.jpg'`  
 reference：https://zhuanlan.zhihu.com/p/98169184  
 
-## Part Ⅲ： 
+## Part Ⅲ： Stereo Matching
 
 ### 问题17：Can you use OpenCV to compute the disparity maps for the images you used for stereo calibration? 
 代码实现为disparity.py，代码地址https://github.com/Hhhana/stereo_project/blob/master/disparity.py  
