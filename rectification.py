@@ -20,12 +20,12 @@ image_lists = []  # 存储获取到的图像
 image_points = []  # 存储图像的点
 
 # 1.读图,找角点
-image_dir = "./images/left"
+image_dir = "./images"
 image_names = []
 
-[image_names.append(image_dir + "/left%02d.jpg" % i) for i in
+[image_names.append(image_dir + "/left/left%02d.jpg" % i) for i in
      [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14]]  # 没有10
-[image_names.append(image_dir + "/right%02d.jpg" % i) for i in [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14]]
+[image_names.append(image_dir + "/right/right%02d.jpg" % i) for i in [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14]]
 print(len(image_names))
 
 for image_name in image_names:
