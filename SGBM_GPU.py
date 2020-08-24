@@ -68,8 +68,8 @@ T = T2 - T3
 
 #矫正一张图像看看是否完成了极线矫正
 start_time = time.time()
-fname1 = 'E:/pics/000000_10.png'
-fname2 = 'E:/pics/000000_11.png'
+fname1 = './images/data_scene_flow/image_2/000000_10.png'
+fname2 = './images/data_scene_flow/image_2/000000_11.png'
 img1 = cv2.imread(fname1)
 img2 = cv2.imread(fname2)
 gray1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
