@@ -1,5 +1,12 @@
 # -*- coding: utf-8 -*-
 """
+Created on Mon Aug 24 14:11:46 2020
+
+@author: Hana Luo
+"""
+
+# -*- coding: utf-8 -*-
+"""
 Created on Fri Aug 21 22:04:48 2020
 
 @author: Hana Luo
@@ -7,19 +14,21 @@ Created on Fri Aug 21 22:04:48 2020
 import numpy as np
 import cv2
 import time
+import os
 import cuda
-
 '''
-从KITTI数据集的标定文件calib_cam_to_cam中导入参数
+从KITTI的标定文件calib_cam_to_cam中导入参数
 标号2,3为彩色相机
 '''
+# 启用GPU加速
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+
 #双目相机参数
-
 #左相机内参数
-
 cameraMatrix1 = np.array([[7.215377e+02, 0.000000e+00, 6.095593e+02], 
                           [0.000000e+00, 7.215377e+02, 1.728540e+02], 
                           [0.000000e+00, 0.000000e+00, 1.000000e+00,]])
+
 #右相机内参数
 cameraMatrix2 = np.array([[7.215377e+02, 0.000000e+00, 6.095593e+02], 
                           [0.000000e+00, 7.215377e+02, 1.728540e+02], 
@@ -83,7 +92,7 @@ cv2.imshow("rectification",result)
 #cv2.imwrite("E:/pics/rec_k0.png", result)
 
 #计算视差图并显示
-#视差计算，对SGBM方法进行GPU加速，后台选择GPU设备运行
+#视差计算
 @cuda.jit(device=True)
 def SGBM(imgL, imgR):
     #SGBM参数设置
